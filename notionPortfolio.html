@@ -1,0 +1,762 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>About Jieun Ahn</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="75c896f7-cb17-4f9d-bc70-c096f1cdbb4e" class="page sans"><header><div class="page-header-icon undefined"><img class="icon" src="About%20Jieun%20Ahn/IMG_6342.jpg"/></div><h1 class="page-title" dir="auto">About Jieun Ahn</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><div style="display:contents" dir="auto"><hr id="989a2cc6-ae0a-457c-872a-32d7a44a833e"/></div><div style="display:contents" dir="auto"><h2 id="1f569017-066e-4a14-b55c-c99319a7414f" class="">👩🏻‍💻 Front, Web Developer</h2></div><div style="display:contents" dir="auto"><div id="804b6839-480e-4b83-ae6e-5a4f34ea3bcb" class="column-list"><div style="display:contents" dir="auto"><div id="a667a1c6-9072-4051-9bdd-64236a416d7e" style="width:43.75%" class="column"><div style="display:contents" dir="ltr"><figure id="753128f8-3e4e-445a-b727-ca615d6a0f5f" class="image"><a href="About%20Jieun%20Ahn/IMG_6046.jpg"><img style="width:290.49481201171875px" src="About%20Jieun%20Ahn/IMG_6046.jpg"/></a></figure></div><div style="display:contents" dir="auto"><p id="d9cc7940-31ea-42c8-b7ae-058a9b6dca9c" class="">
+</p></div></div></div><div style="display:contents" dir="auto"><div id="fe3c78e8-ce13-4d1d-a532-b1d9c3a606b5" style="width:56.25%" class="column"><div style="display:contents" dir="auto"><p id="d6ae1257-1203-4721-bd7c-6d18cc2beb0e" class="">React와 TypeScript 기반으로 B2B 통합 모니터링 솔루션의 프론트엔드 개발을 담당해온 5년차 프론트엔드 개발자 안지은입니다.</p></div><div style="display:contents" dir="auto"><p id="b59f9900-4e9a-406f-91f3-045b9fbfe7ad" class="">대규모 운영 환경에서 사용되는 대시보드 UI를 개발하며 복잡한 사용자 흐름과 데이터 구조를 다루는 경험을 쌓았습니다.</p></div><div style="display:contents" dir="auto"><p id="ff7dbd26-0293-4903-8562-b90a6b6648e8" class="">또한, AI 기반 개발 도구를 실무에 적극 활용하며 개발 생산성과 업무 효율을 개선하는 방식에 관심을 가지고 있습니다.</p></div><div style="display:contents" dir="auto"><p id="17ee1a40-98cf-4f46-8f8e-c203b1c2b999" class="">
+</p></div></div></div></div></div><div style="display:contents" dir="auto"><h2 id="365dd9b5-2947-8066-ab96-df37b3c06b5e" class="">🔎 Profile</h2></div><div style="display:contents" dir="auto"><hr id="387307fc-9abb-4d02-a17f-2fec599424db"/></div><div style="display:contents" dir="auto"><h3 id="7d34fef9-e68b-4871-8952-579c2acb68b2" class=""><strong>안지은</strong></h3></div><div style="display:contents" dir="auto"><ul id="365dd9b5-2947-80ab-8c3b-cbb735b6750c" class="bulleted-list"><li style="list-style-type:disc">Frontend Developer 5년차</li></ul></div><div style="display:contents" dir="auto"><ul id="365dd9b5-2947-80eb-bf90-da29a3c3c166" class="bulleted-list"><li style="list-style-type:disc">✉️  anjieun95@naver.com</li></ul></div><div style="display:contents" dir="auto"><ul id="365dd9b5-2947-8016-89f9-e429da794eca" class="bulleted-list"><li style="list-style-type:disc">📱 010-2112-9288</li></ul></div><div style="display:contents" dir="auto"><ul id="365dd9b5-2947-8091-9fe3-f55a63d67b86" class="bulleted-list"><li style="list-style-type:disc">서울여자대학교 정보보호학과 졸업</li></ul></div><div style="display:contents" dir="auto"><p id="365dd9b5-2947-80ba-8f44-fe7323261a20" class="">
+</p></div><div style="display:contents" dir="auto"><p id="365dd9b5-2947-804c-866c-f7b946976a6b" class="">
+</p></div><div style="display:contents" dir="auto"><h2 id="365dd9b5-2947-8012-bd5f-ce057eeba7e1" class="">💼 Career Summary</h2></div><div style="display:contents" dir="auto"><h3 id="365dd9b5-2947-80ff-9f58-cbcd11a1f4a6" class="">(주)엔키아 | Frontend Developer</h3></div><div style="display:contents" dir="auto"><p id="365dd9b5-2947-8057-a900-d0e003865624" class="">2021.11 ~ 재직 중</p></div><div style="display:contents" dir="auto"><hr id="365dd9b5-2947-80a2-8963-d3259306d360"/></div><div style="display:contents" dir="auto"><h3 id="365dd9b5-2947-803a-b3bc-e7c33d0fc03d" class="">Polestar10</h3></div><div style="display:contents" dir="auto"><p id="365dd9b5-2947-8017-ba4e-d55b65bf8e3d" class="">2023.03 ~ 현재</p></div><div style="display:contents" dir="auto"><p id="365dd9b5-2947-80fe-94e7-fb55a8bb54fc" class="">AIOps 기반 On-premise 통합 모니터링 솔루션 프론트엔드 개발</p></div><div style="display:contents" dir="auto"><ul id="365dd9b5-2947-80c1-9397-ec476303673d" class="bulleted-list"><li style="list-style-type:disc">대시보드, 알람 정책, 시스템 관리 등 운영형 UI 설계 및 구현</li></ul></div><div style="display:contents" dir="auto"><ul id="365dd9b5-2947-8034-9cea-ceb22dcb7910" class="bulleted-list"><li style="list-style-type:disc">ag-Grid 기반 대용량 데이터 관리 화면 및 Tree 구조 개발</li></ul></div><div style="display:contents" dir="auto"><ul id="365dd9b5-2947-8018-8f6f-f4e6873f46aa" class="bulleted-list"><li style="list-style-type:disc">Apache ECharts 기반 시계열 데이터 시각화 기능 구현</li></ul></div><div style="display:contents" dir="auto"><ul id="365dd9b5-2947-8010-8eee-ed81e9bced11" class="bulleted-list"><li style="list-style-type:disc">복잡한 정책 설정 및 Validation 기반 입력 흐름 설계</li></ul></div><div style="display:contents" dir="auto"><ul id="365dd9b5-2947-8046-baf5-fbaa885ccd30" class="bulleted-list"><li style="list-style-type:disc">공통 컴포넌트 및 유틸리티 모듈화를 통한 재사용성 개선</li></ul></div><div style="display:contents" dir="auto"><ul id="365dd9b5-2947-80ce-b0a0-e235cb58bf8c" class="bulleted-list"><li style="list-style-type:disc">MSA / MFA 환경 기반 프론트엔드 개발 및 유지보수</li></ul></div><div style="display:contents" dir="auto"><p id="365dd9b5-2947-805c-a3e0-dfbb1ae32dca" class=""><strong>Tech Stack</strong></p></div><div style="display:contents" dir="auto"><p id="365dd9b5-2947-806c-bd4f-c3402fa79ab2" class=""><code>React</code> <code>TypeScript</code> <code>Recoil</code> <code>ag-Grid</code> <code>Apache ECharts</code> <code>Ant Design</code> <code>SCSS</code> <code>Figma</code></p></div><div style="display:contents" dir="auto"><hr id="365dd9b5-2947-8076-a8ce-f6f975edcf19"/></div><div style="display:contents" dir="auto"><h3 id="365dd9b5-2947-807f-ae7b-c591d7a7c43a" class="">NDS (NKIA Design System)</h3></div><div style="display:contents" dir="auto"><p id="365dd9b5-2947-80a3-bd6c-c527f7dc2cff" class="">2022.12 ~ 2024.07</p></div><div style="display:contents" dir="auto"><p id="365dd9b5-2947-80a2-8498-ec69ddfe9b1e" class="">통합신제품 공통 UI 컴포넌트 및 디자인 시스템 개발</p></div><div style="display:contents" dir="auto"><ul id="365dd9b5-2947-802a-b81f-ccb807bf48ba" class="bulleted-list"><li style="list-style-type:disc">Ant Design 기반 공통 UI 컴포넌트 및 스타일 시스템 구축</li></ul></div><div style="display:contents" dir="auto"><ul id="365dd9b5-2947-80d6-8432-e5d1c7d794f3" class="bulleted-list"><li style="list-style-type:disc">Modal, DatePicker, Loading 등 운영 제품 공통 컴포넌트 설계 및 구현</li></ul></div><div style="display:contents" dir="auto"><ul id="365dd9b5-2947-8061-899b-ed80d3328e76" class="bulleted-list"><li style="list-style-type:disc">Storybook 기반 컴포넌트 문서화 및 협업 환경 구성</li></ul></div><div style="display:contents" dir="auto"><ul id="365dd9b5-2947-8017-8006-f5088eed81f6" class="bulleted-list"><li style="list-style-type:disc">디자인 토큰 및 상태 기반 범용 컴포넌트 구조 설계</li></ul></div><div style="display:contents" dir="auto"><ul id="365dd9b5-2947-80db-a144-f2dcea1f5767" class="bulleted-list"><li style="list-style-type:disc">제품 간 UI 일관성 및 유지보수성 향상</li></ul></div><div style="display:contents" dir="auto"><p id="365dd9b5-2947-8070-89c4-fbe893183011" class=""><strong>Tech Stack</strong></p></div><div style="display:contents" dir="auto"><p id="365dd9b5-2947-802c-9096-d5ad3fbef12c" class=""><code>React</code> <code>TypeScript</code> <code>Ant Design</code> <code>Storybook</code> <code>SCSS</code></p></div><div style="display:contents" dir="auto"><hr id="365dd9b5-2947-8008-9588-d7574b029209"/></div><div style="display:contents" dir="auto"><h3 id="365dd9b5-2947-80d8-b519-eee77821f05a" class="">Polestar S</h3></div><div style="display:contents" dir="auto"><p id="365dd9b5-2947-8023-abd1-e48462357282" class="">2022.09 ~ 2022.11</p></div><div style="display:contents" dir="auto"><p id="365dd9b5-2947-808e-9a13-ee4c031e9c95" class="">구독형 SaaS 서버 모니터링 서비스 프론트엔드 개발</p></div><div style="display:contents" dir="auto"><ul id="365dd9b5-2947-8034-b980-da6bc3e2bcc0" class="bulleted-list"><li style="list-style-type:disc">조직 관리, 멤버십, 빌링, 관리자 기능 UI 개발</li></ul></div><div style="display:contents" dir="auto"><ul id="365dd9b5-2947-8024-91f0-f4b11a7653f1" class="bulleted-list"><li style="list-style-type:disc">React Query / Redux 기반 상태 관리 및 비동기 데이터 처리</li></ul></div><div style="display:contents" dir="auto"><ul id="365dd9b5-2947-80dc-a2c3-f6b14b7bc690" class="bulleted-list"><li style="list-style-type:disc">MFA(Micro Frontend Architecture) 환경 기반 UI 개발</li></ul></div><div style="display:contents" dir="auto"><ul id="365dd9b5-2947-80da-b6de-d7dd936b91b4" class="bulleted-list"><li style="list-style-type:disc">Apache ECharts 기반 차트 및 통계 시각화 기능 구현</li></ul></div><div style="display:contents" dir="auto"><ul id="365dd9b5-2947-8040-b66c-e07a428ce699" class="bulleted-list"><li style="list-style-type:disc">i18n 기반 다국어(한국어/영어) 지원</li></ul></div><div style="display:contents" dir="auto"><p id="365dd9b5-2947-8066-abaf-ed641094e3e4" class=""><strong>Achievements</strong></p></div><div style="display:contents" dir="auto"><ul id="365dd9b5-2947-8055-9a22-c91c37a542cf" class="bulleted-list"><li style="list-style-type:disc">글로벌 SaaS 육성 프로젝트 우수 과제 선정 및 장관상 수상</li></ul></div><div style="display:contents" dir="auto"><ul id="365dd9b5-2947-80da-ac9d-c3295d16d99d" class="bulleted-list"><li style="list-style-type:disc">사업화 이후 12억원 이상 매출 달성 기여</li></ul></div><div style="display:contents" dir="auto"><p id="365dd9b5-2947-80a2-bba2-e3c2c77790a2" class=""><strong>Tech Stack</strong></p></div><div style="display:contents" dir="auto"><p id="365dd9b5-2947-803b-bcc3-d416a1637af7" class=""><code>React</code> <code>TypeScript</code> <code>Tanstack Query</code> <code>Redux</code> <code>Ant Design</code> <code>styled-components</code> <code>Apache ECharts</code></p></div><div style="display:contents" dir="auto"><hr id="365dd9b5-2947-808a-a567-c19935647e0d"/></div><div style="display:contents" dir="auto"><h3 id="365dd9b5-2947-80dc-b7e6-fc503a211074" class="">AIOTION WSS</h3></div><div style="display:contents" dir="auto"><p id="365dd9b5-2947-80b3-9e1d-d0080a00e603" class="">2022.03 ~ 2023.11</p></div><div style="display:contents" dir="auto"><p id="365dd9b5-2947-8081-bab2-e5be5e61746c" class="">IoT 기반 와이어로프 안전 진단 및 모니터링 솔루션 프론트엔드 개발</p></div><div style="display:contents" dir="auto"><ul id="365dd9b5-2947-80e1-b8da-cb11b60026d1" class="bulleted-list"><li style="list-style-type:disc">월간 리포트, 검수 프로세스, 알람 정책, 센서 차트 UI 개발</li></ul></div><div style="display:contents" dir="auto"><ul id="365dd9b5-2947-80e2-81fa-f7d791f1e00e" class="bulleted-list"><li style="list-style-type:disc">WebSocket 기반 실시간 상태 모니터링 기능 구현</li></ul></div><div style="display:contents" dir="auto"><ul id="365dd9b5-2947-8089-b40c-d0a8718e258a" class="bulleted-list"><li style="list-style-type:disc">Apache ECharts 기반 센서 데이터 시각화 및 차트 커스터마이징</li></ul></div><div style="display:contents" dir="auto"><ul id="365dd9b5-2947-8005-8362-e9b1bcebc35f" class="bulleted-list"><li style="list-style-type:disc">PDF 생성 구조 개선을 통한 리포트 품질 향상</li></ul></div><div style="display:contents" dir="auto"><ul id="365dd9b5-2947-80f6-9be1-f96859d059ed" class="bulleted-list"><li style="list-style-type:disc">고객사 요구사항 기반 기능 커스터마이징 및 UI 개선 대응</li></ul></div><div style="display:contents" dir="auto"><p id="365dd9b5-2947-8099-bc2d-cbb8c3b2a077" class=""><strong>Tech Stack</strong></p></div><div style="display:contents" dir="auto"><p id="365dd9b5-2947-8033-b392-c02346ce63a2" class=""><code>React</code> <code>JavaScript</code> <code>Ant Design</code> <code>Apache ECharts</code> <code>WebSocket</code> <code>LESS</code></p></div><div style="display:contents" dir="auto"><hr id="365dd9b5-2947-80c7-bc06-c9a72d64d919"/></div><div style="display:contents" dir="auto"><h3 id="365dd9b5-2947-8053-99db-c8a1f513fc44" class="">AI Prompt Manager</h3></div><div style="display:contents" dir="auto"><p id="365dd9b5-2947-8046-97f6-fc153aa77391" class="">2025.07 ~ 진행 중</p></div><div style="display:contents" dir="auto"><p id="365dd9b5-2947-802c-9e66-f19be04129ff" class="">사내 LLM 프로젝트를 위한 Prompt 관리 서비스 개발</p></div><div style="display:contents" dir="auto"><ul id="365dd9b5-2947-80c2-87cd-e388e88b3c43" class="bulleted-list"><li style="list-style-type:disc">Prompt 버전 관리 및 평가 데이터 관리 UI 개발</li></ul></div><div style="display:contents" dir="auto"><ul id="365dd9b5-2947-8005-a44c-df48e2bcc488" class="bulleted-list"><li style="list-style-type:disc">테스트 자동화 흐름을 고려한 관리형 UI 구조 설계</li></ul></div><div style="display:contents" dir="auto"><ul id="365dd9b5-2947-80bb-957f-fd835e82150f" class="bulleted-list"><li style="list-style-type:disc">다크/라이트 모드를 지원하는 전역 테마 시스템 구성</li></ul></div><div style="display:contents" dir="auto"><ul id="365dd9b5-2947-807a-920f-e56843194ffb" class="bulleted-list"><li style="list-style-type:disc">재사용 가능한 공통 컴포넌트 및 상태 기반 UI 설계</li></ul></div><div style="display:contents" dir="auto"><p id="365dd9b5-2947-80f7-bff4-c0633eeb39df" class=""><strong>Tech Stack</strong></p></div><div style="display:contents" dir="auto"><p id="365dd9b5-2947-808e-831f-e16a66fd41e1" class=""><code>React</code> <code>TypeScript</code> <code>Ant Design</code> <code>Figma</code> <code>styled-components</code></p></div><div style="display:contents" dir="auto"><hr id="365dd9b5-2947-80fe-a52f-d2e048df86f6"/></div><div style="display:contents" dir="auto"><h3 id="365dd9b5-2947-8030-ba63-cc2a88a256ab" class="">오비고 | Frontend Developer (인턴)</h3></div><div style="display:contents" dir="auto"><p id="365dd9b5-2947-80a9-b917-cc2c9ced655a" class="">2020.01 ~ 2020.06</p></div><div style="display:contents" dir="auto"><p id="365dd9b5-2947-8082-ab7b-feb2a1d61efa" class="">차량용 애플리케이션 퍼블리싱 및 프론트엔드 개발 보조</p></div><div style="display:contents" dir="auto"><ul id="365dd9b5-2947-8044-8848-cc9c25588933" class="bulleted-list"><li style="list-style-type:disc">차량용 UI 퍼블리싱 및 화면 개발 지원</li></ul></div><div style="display:contents" dir="auto"><ul id="365dd9b5-2947-8012-9abd-ed1da673a7d4" class="bulleted-list"><li style="list-style-type:disc">HTML/CSS 기반 UI 구현 및 유지보수 참여</li></ul></div><div style="display:contents" dir="auto"><ul id="365dd9b5-2947-805b-96f1-d672a9f89a42" class="bulleted-list"><li style="list-style-type:disc">개발 및 배포 프로세스 보조 업무 수행</li></ul></div><div style="display:contents" dir="auto"><p id="365dd9b5-2947-8064-82de-fa10966a9b76" class=""><strong>Tech Stack</strong></p></div><div style="display:contents" dir="auto"><p id="365dd9b5-2947-8002-8e78-c561fd9b30da" class=""><code>Vue</code> <code>HTML</code> <code>CSS</code> <code>JavaScript</code></p></div><div style="display:contents" dir="auto"><p id="365dd9b5-2947-80db-9afe-c7ea8510b4e6" class="">
+</p></div><div style="display:contents" dir="auto"><p id="365dd9b5-2947-805e-ae50-dac121c80f66" class="">
+</p></div><div style="display:contents" dir="auto"><h2 id="365dd9b5-2947-80df-8a2e-ef99e32dd1fb" class="">⚡️ Core Strength</h2></div><div style="display:contents" dir="auto"><hr id="365dd9b5-2947-80ae-b50b-d3061f50b408"/></div><div style="display:contents" dir="auto"><blockquote id="365dd9b5-2947-8008-a835-df53d0e0b591" class=""><strong>대규모 운영 UI 개발 경험</strong><div style="display:contents" dir="auto"><p id="365dd9b5-2947-80bc-b9dc-cbb87fd65e34" class="">수많은 리소스와 정책 데이터를 다루는 B2B 모니터링 제품에서 Grid, Form, Chart 중심의 복잡한 화면을 개발했습니다.</p></div></blockquote></div><div style="display:contents" dir="auto"><blockquote id="365dd9b5-2947-809c-9b23-e820d8650b60" class=""><strong>복잡한 정책/설정 UI 설계 경험</strong><div style="display:contents" dir="auto"><p id="365dd9b5-2947-8049-933e-ed6cc4628e62" class="">알람 정책, 임계치 설정, 대상 선택 등 다단계 입력 흐름에서 validation과 사용자 행동 흐름을 고려한 UI를 구현했습니다.</p></div></blockquote></div><div style="display:contents" dir="auto"><blockquote id="365dd9b5-2947-809f-8ccd-f098fe88c29a" class=""><strong>공통화와 유지보수성 개선 경험</strong><div style="display:contents" dir="auto"><p id="365dd9b5-2947-80ba-8b3a-c62b1d3acdae" class="">반복되는 UI 패턴과 유틸리티를 모듈화하여 제품 전반의 개발 일관성과 생산성 향상에 기여했습니다.</p></div></blockquote></div><div style="display:contents" dir="auto"><p id="365dd9b5-2947-8085-ba72-fe69558ba091" class="">
+</p></div><div style="display:contents" dir="auto"><p id="365dd9b5-2947-807c-8df9-f727bde694f5" class="">
+</p></div><div style="display:contents" dir="auto"><p id="196dd9b5-2947-80c1-a0a5-c80648096f77" class="">
+</p></div><div style="display:contents" dir="ltr"><div id="90860a79-ee58-4aba-8fc6-dec5223f8651" class="collection-content"><h4 class="collection-title">💡 Project</h4><div class="collection-content-wrapper"><table class="collection-content"><colgroup><col style="width:100%"/></colgroup><thead><tr><th><span class="icon property-icon"><img src="https://www.notion.so/icons/font_gray.svg" style="width:14px;height:14px;display:block"/></span>Name</th></tr></thead><tbody><tr id="241dd9b5-2947-8010-93d9-e4bf964279d7"><td class="cell-title"><a href="About%20Jieun%20Ahn/%F0%9F%92%A1%20Project/AI%20Prompt%20Manager%20241dd9b52947801093d9e4bf964279d7.html"><img class="icon" src="About%20Jieun%20Ahn/%F0%9F%92%A1%20Project/AI%20Prompt%20Manager/ai-logo.png"/> AI Prompt Manager</a></td></tr><tr id="bb73bc2c-00c3-47f7-8818-55eb320eba7d"><td class="cell-title"><a href="About%20Jieun%20Ahn/%F0%9F%92%A1%20Project/Polestar10%20bb73bc2c00c347f7881855eb320eba7d.html"><span class="icon">✨</span>Polestar10</a></td></tr><tr id="2e461602-653e-4236-bdd4-db8099e8bd4d"><td class="cell-title"><a href="About%20Jieun%20Ahn/%F0%9F%92%A1%20Project/NDS(Nkia%20DesignSystem)%202e461602653e4236bdd4db8099e8bd4d.html"><img class="icon" src="About%20Jieun%20Ahn/%F0%9F%92%A1%20Project/NDS(Nkia%20DesignSystem)/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-07-12_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%258C%25E1%2585%25A5%25E1%2586%25AB_7.55.30.png"/>NDS(Nkia DesignSystem)</a></td></tr><tr id="fc2de194-4d2f-4061-9c9c-b40b78fafb50"><td class="cell-title"><a href="About%20Jieun%20Ahn/%F0%9F%92%A1%20Project/Polestar%20S%20fc2de1944d2f40619c9cb40b78fafb50.html"><img class="icon" src="About%20Jieun%20Ahn/%F0%9F%92%A1%20Project/Polestar%20S/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2022-11-27_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_4.08.10.png"/>Polestar S</a></td></tr><tr id="a9695cde-650a-4ac3-a06f-2501e2499871"><td class="cell-title"><a href="About%20Jieun%20Ahn/%F0%9F%92%A1%20Project/AIOTION%20WSS%20a9695cde650a4ac3a06f2501e2499871.html"><img class="icon" src="About%20Jieun%20Ahn/%F0%9F%92%A1%20Project/AIOTION%20WSS/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2022-11-27_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_2.10.27.png"/>AIOTION WSS</a></td></tr></tbody></table></div><br/><br/></div></div><div style="display:contents" dir="auto"><p id="254dd9b5-2947-8004-81cc-ed9ee360f73c" class="">
+</p></div><div style="display:contents" dir="auto"><p id="95b5d2ae-74d2-4b95-b4a4-6365d9176bc2" class="">
+</p></div><div style="display:contents" dir="auto"><div id="365dd9b5-2947-80c4-b90a-facde018d327" class="column-list"><div style="display:contents" dir="auto"><div id="365dd9b5-2947-80d3-bb1c-cb17c6868b20" style="width:50%" class="column"><div style="display:contents" dir="auto"><h2 id="31c85cd2-b84d-40f6-a115-47ecfa265ce8" class="">📔 Blog</h2></div><div style="display:contents" dir="ltr"><figure id="8229d83e-54d4-492a-90c1-e17ef6fffdc6"><a href="https://next-life-koala.tistory.com/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Like a koala 🐨</div><div class="bookmark-description">Lv1. 프로그래머스] - 3진법 뒤집기 JS - (11월 1주차) 자연수 n이 매개변수로 주어집니다. n을 3진법 상에서 앞뒤로 뒤집은 후, 이를 다시 10진법으로 표현한 수를 return 하도록 solution 함수를 완성해주세요. 1) 10진수 n → 3진수 변환 ⇒ n진법을 구하기 위해 toString(n) 을 사용 2) 1번에서 나온 3진수를 reverse 3) 2번에서 나온 수 → 10진수 변환 첫번째 자리수 * 3^(숫자길이-1) ➕ 두번째 자리수 * 3^(숫자길이-2) ➕ 세번째 자리수 * 3^(숫자길이-3) ...</div></div><div class="bookmark-href"><img src="https://next-life-koala.tistory.com/favicon.ico" class="icon bookmark-icon"/>https://next-life-koala.tistory.com/</div></div><img src="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&amp;fname=https%3A%2F%2Ftistory1.daumcdn.net%2Ftistory%2F5560115%2Fattach%2F3f37ad3f7e70467bb2a048367c6b9152" class="bookmark-image"/></a></figure></div></div></div><div style="display:contents" dir="auto"><div id="365dd9b5-2947-803e-9207-e74140b2f363" style="width:50%" class="column"><div style="display:contents" dir="auto"><h2 id="61ac7254-7b80-4fbb-832c-c83c46e934a9" class="">🪶 Github</h2></div><div style="display:contents" dir="ltr"><figure id="bbb0810d-9939-4300-9a5a-9ed331c6bcb3"><a href="https://github.com/jieun-git" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">jieun-git - Overview</div><div class="bookmark-description">You can&#x27;t perform that action at this time. You signed in with another tab or window. You signed out in another tab or window. Reload to refresh your session. Reload to refresh your session.</div></div><div class="bookmark-href"><img src="https://github.com/favicon.ico" class="icon bookmark-icon"/>https://github.com/jieun-git</div></div><img src="https://avatars.githubusercontent.com/u/99377350?v=4" class="bookmark-image"/></a></figure></div></div></div></div></div><div style="display:contents" dir="auto"><p id="365dd9b5-2947-8073-8054-f72c124f076b" class="">
+</p></div><div style="display:contents" dir="auto"><p id="365dd9b5-2947-807f-9f91-e1990b74b0db" class="">
+</p></div><div style="display:contents" dir="auto"><h2 id="b0ab9f7a-c5dd-4c15-9115-a73d791eb68f" class="">🧾 Certificate</h2></div><div style="display:contents" dir="auto"><hr id="0d82a6c6-1e4c-44cd-adad-99ba541e91d5"/></div><div style="display:contents" dir="auto"><div id="e77666d5-ec67-4ecc-a05b-135a721834d8" class="column-list"><div style="display:contents" dir="auto"><div id="229b92d2-dbc1-43f0-9436-036baecc69a1" style="width:62.5%" class="column"><div style="display:contents" dir="auto"><ul id="5bfb8802-22f6-4dd1-a0cc-f20927471d3b" class="bulleted-list"><li style="list-style-type:disc">정보처리기사</li></ul></div><div style="display:contents" dir="auto"><p id="d0296249-7927-4f9a-9a02-cb6128737e76" class="">
+</p></div></div></div><div style="display:contents" dir="auto"><div id="67e79be9-aac4-4daa-86a0-b75dd2fd4239" style="width:37.50000000000001%" class="column"><div style="display:contents" dir="auto"><p id="6d4bddfd-7f68-4762-8edd-c2fef9a718fd" class=""><mark class="highlight-gray">한국산업인력공단 / 2019.05.22 취득</mark></p></div><div style="display:contents" dir="auto"><p id="9c1f4b54-6114-4d53-a29d-0cd26abea8cf" class="">
+</p></div></div></div></div></div><div style="display:contents" dir="auto"><p id="35896dd5-4d6b-4c0a-808e-fe5729a852e5" class="">
+</p></div><div style="display:contents" dir="auto"><p id="3266668c-26e0-48e3-986c-6d6e282288db" class="">
+</p></div><div style="display:contents" dir="auto"><p id="e6c5f9a0-f3f8-4a83-b467-4521571a8720" class="">
+</p></div><div style="display:contents" dir="auto"><p id="a3c145f4-56af-4f9e-bd63-b9759584b0f7" class="">
+</p></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

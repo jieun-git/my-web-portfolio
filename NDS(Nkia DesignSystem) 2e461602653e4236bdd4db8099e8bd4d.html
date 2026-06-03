@@ -1,0 +1,748 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>NDS(Nkia DesignSystem)</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="2e461602-653e-4236-bdd4-db8099e8bd4d" class="page sans"><header><img class="page-cover-image" src="https://www.notion.so/images/page-cover/webb1.jpg" style="object-position:center 39.38%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="NDS(Nkia%20DesignSystem)/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-07-12_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%258C%25E1%2585%25A5%25E1%2586%25AB_7.55.30.png"/></div><h1 class="page-title" dir="auto">NDS(Nkia DesignSystem)</h1><p class="page-description" dir="auto"></p><table class="properties"><tbody><tr class="property-row property-row-date"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/calendar_gray.svg" style="width:14px;height:14px;display:block"/></span>진행 기간</th><td><time>2022년 12월 26일 → 2024년 7월 11일</time></td></tr><tr class="property-row property-row-text"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/description_gray.svg" style="width:14px;height:14px;display:block"/></span>프로젝트 소개</th><td>통합신제품 공통 UI 컴포넌트 프로젝트</td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/list_gray.svg" style="width:14px;height:14px;display:block"/></span>Skills</th><td><span class="selected-value select-value-color-yellow">Ant design</span><span class="selected-value select-value-color-gray">React</span><span class="selected-value select-value-color-red">Scss</span><span class="selected-value select-value-color-blue">Storybook</span><span class="selected-value select-value-color-pink">Typescript</span></td></tr></tbody></table></header><div class="page-body"><div style="display:contents" dir="auto"><h2 id="5b0fa472-a5c0-47a6-af18-6f8c8897bc51" class="">🙌  Introduction</h2></div><div style="display:contents" dir="auto"><ul id="365dd9b5-2947-8024-b08c-dcac013daf35" class="bulleted-list"><li style="list-style-type:disc"><code>Ant Design</code> 기반으로 자사 제품 환경에 맞는 스타일과 기능을 확장하여 구축한 통합 디자인 시스템입니다.</li></ul></div><div style="display:contents" dir="auto"><ul id="365dd9b5-2947-805d-a2c7-e2e2f79b96f4" class="bulleted-list"><li style="list-style-type:disc">여러 제품과 조직에서 공통으로 사용할 수 있는 UI 컴포넌트 및 스타일 시스템을 제공하여 개발 생산성과 UI 일관성을 높이는 것을 목표로 했습니다.</li></ul></div><div style="display:contents" dir="auto"><ul id="365dd9b5-2947-8056-a600-ec32b5412543" class="bulleted-list"><li style="list-style-type:disc"><code>Storybook</code> 기반 문서화를 통해 컴포넌트 사용 가이드와 협업 효율을 개선했습니다.</li></ul></div><div style="display:contents" dir="auto"><h2 id="241dd9b5-2947-8047-99e0-f283b848a698" class=""><br/><br/>🧩  My Role &amp; Contribution</h2></div><div style="display:contents" dir="auto"><ul id="365dd9b5-2947-80a5-acfe-ee6f32c4fea4" class="bulleted-list"><li style="list-style-type:disc">신규 요구사항에 맞춘 공통 UI 컴포넌트 설계 및 기능 확장</li></ul></div><div style="display:contents" dir="auto"><ul id="365dd9b5-2947-8014-b2e8-cd3b567349b7" class="bulleted-list"><li style="list-style-type:disc">디자인 토큰과 상태 기반 구조를 고려한 범용 컴포넌트 개발</li></ul></div><div style="display:contents" dir="auto"><ul id="365dd9b5-2947-80ed-b53b-de130c110e84" class="bulleted-list"><li style="list-style-type:disc">DatePicker, Modal, Loading 등 운영 제품에서 반복적으로 사용되는 UI 공통화</li></ul></div><div style="display:contents" dir="auto"><ul id="365dd9b5-2947-8074-807a-f9c14fea9f68" class="bulleted-list"><li style="list-style-type:disc">Storybook 기반 컴포넌트 문서화 및 협업 환경 구성</li></ul></div><div style="display:contents" dir="auto"><ul id="365dd9b5-2947-80e4-971f-c8fa7dbbf57d" class="bulleted-list"><li style="list-style-type:disc">제품 간 UI 일관성과 유지보수성을 고려한 스타일 시스템 구성</li></ul></div><div style="display:contents" dir="auto"><p id="241dd9b5-2947-8046-b122-e1e280370ad1" class="">
+</p></div><div style="display:contents" dir="auto"><h2 id="8cf88edb-d71d-47de-8b75-e7c53847978d" class=""><br/>🛠️ Key Implementation</h2></div><div style="display:contents" dir="auto"><h4 id="365dd9b5-2947-8054-bb38-f0783c7fd0a8" class="">🎨 공통 스타일 및 아이콘 시스템</h4></div><div style="display:contents" dir="auto"><ul id="365dd9b5-2947-8045-bb61-ead4517478c4" class="bulleted-list"><li style="list-style-type:disc">기존 제품에서 사용하던 아이콘 구조를 기반으로 신규 공통 아이콘 라이브러리 구성 및 배포</li></ul></div><div style="display:contents" dir="auto"><ul id="365dd9b5-2947-806b-95ce-f6558028642c" class="bulleted-list"><li style="list-style-type:disc">프로젝트 전반에서 일관된 아이콘 사용이 가능하도록 컴포넌트 형태로 제공</li></ul></div><div style="display:contents" dir="auto"><ul id="365dd9b5-2947-8040-a49a-cce43f6d57ab" class="bulleted-list"><li style="list-style-type:disc">디자인 시스템 스타일 가이드에 맞춘 SVG 커스터마이징 적용</li></ul></div><div style="display:contents" dir="auto"><hr id="365dd9b5-2947-80ce-bce9-c966ef2dfedc"/></div><div style="display:contents" dir="auto"><h4 id="365dd9b5-2947-8083-b6c3-d3a5b22bd7de" class="">🧩 공통 UI 컴포넌트 설계</h4></div><div style="display:contents" dir="auto"><ul id="365dd9b5-2947-8062-8e38-dbc0ffef39fb" class="bulleted-list"><li style="list-style-type:disc">Modal, DatePicker 등 반복적으로 사용되는 UI 컴포넌트 공통화</li></ul></div><div style="display:contents" dir="auto"><ul id="365dd9b5-2947-80e1-8ab1-dfaadf9ebb39" class="bulleted-list"><li style="list-style-type:disc">옵션 및 상태에 따라 유연하게 동작할 수 있도록 범용 구조 설계</li></ul></div><div style="display:contents" dir="auto"><ul id="365dd9b5-2947-80ee-b74a-d635171c903d" class="bulleted-list"><li style="list-style-type:disc">제품별 요구사항에 대응할 수 있도록 props 기반 커스터마이징 지원</li></ul></div><div style="display:contents" dir="auto"><hr id="365dd9b5-2947-8004-8111-d65d07013dd5"/></div><div style="display:contents" dir="auto"><h4 id="365dd9b5-2947-8058-8d0f-d86538447327" class="">📅 날짜/시간 처리 유틸리티 개발</h4></div><div style="display:contents" dir="auto"><ul id="365dd9b5-2947-8070-88cb-c51c9d7a57ec" class="bulleted-list"><li style="list-style-type:disc">Day.js 기반 날짜 계산 유틸 함수 구현</li></ul></div><div style="display:contents" dir="auto"><ul id="365dd9b5-2947-80a3-9e64-efa1521a8d8e" class="bulleted-list"><li style="list-style-type:disc">년/월/시간/범위 선택 등 다양한 DatePicker 시나리오 지원</li></ul></div><div style="display:contents" dir="auto"><ul id="365dd9b5-2947-80be-9208-dc0b79215b7f" class="bulleted-list"><li style="list-style-type:disc">DatePicker 네비게이션 및 상태 변경 로직에 공통 유틸 함수 적용</li></ul></div><div style="display:contents" dir="auto"><hr id="365dd9b5-2947-808b-810f-fa83234671be"/></div><div style="display:contents" dir="auto"><h4 id="365dd9b5-2947-80a8-92fd-d4d5d357ea07" class="">⏳ 공통 Loading 및 상태 UI 구현</h4></div><div style="display:contents" dir="auto"><ul id="365dd9b5-2947-8026-877b-fca98c7fc03a" class="bulleted-list"><li style="list-style-type:disc">SCSS animation 및 keyframe 기반 Loading UI 구현</li></ul></div><div style="display:contents" dir="auto"><ul id="365dd9b5-2947-8017-9044-db10fbd4dd7a" class="bulleted-list"><li style="list-style-type:disc">라우팅, 모듈 로딩, 데이터 로딩 상태에 따라 공통으로 사용할 수 있는 Loading 컴포넌트 구성</li></ul></div><div style="display:contents" dir="auto"><p id="0fe98c29-767c-4cb0-af9c-ed98caf3a8f4" class="">
+</p></div><div style="display:contents" dir="auto"><div id="cb4b4476-4b0a-466b-8e05-109849f65389" class="column-list"><div style="display:contents" dir="auto"><div id="0533458e-20bc-4d53-b5f3-9d578f441ad5" style="width:50%" class="column"><div style="display:contents" dir="ltr"><figure id="7f5712bd-9630-46cc-8728-b7203f75b10c" class="image" style="text-align:left"><a href="NDS(Nkia%20DesignSystem)/Untitled.png"><img style="width:768px" src="NDS(Nkia%20DesignSystem)/Untitled.png"/></a></figure></div><div style="display:contents" dir="ltr"><figure id="6e516c12-410a-4d71-b94a-eb175c75d51d" class="image"><a href="NDS(Nkia%20DesignSystem)/014bad9f-cd20-42b3-85f4-0a547d1e0021.png"><img style="width:720px" src="NDS(Nkia%20DesignSystem)/014bad9f-cd20-42b3-85f4-0a547d1e0021.png"/></a></figure></div><div style="display:contents" dir="ltr"><figure id="3c125050-2b1f-43dc-8286-2172632803fe" class="image"><a href="NDS(Nkia%20DesignSystem)/824b1b21-28ba-4ad0-8d7b-db2f857955b7.png"><img style="width:416.83895131086143px" src="NDS(Nkia%20DesignSystem)/824b1b21-28ba-4ad0-8d7b-db2f857955b7.png"/></a></figure></div><div style="display:contents" dir="ltr"><figure id="23772ee7-a72b-4162-a1f5-3c12be6c35f7" class="image"><a href="NDS(Nkia%20DesignSystem)/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-07-11_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_9.05.07.png"><img style="width:1888px" src="NDS(Nkia%20DesignSystem)/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-07-11_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_9.05.07.png"/></a></figure></div></div></div><div style="display:contents" dir="auto"><div id="d23895f1-9e29-4869-bd04-b828dcefb269" style="width:50%" class="column"><div style="display:contents" dir="ltr"><figure id="a85d76b8-f7e8-49ab-a474-67e67fb28eed" class="image" style="text-align:left"><a href="NDS(Nkia%20DesignSystem)/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2023-02-05_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_1.26.04.png"><img style="width:768px" src="NDS(Nkia%20DesignSystem)/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2023-02-05_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_1.26.04.png"/></a></figure></div><div style="display:contents" dir="ltr"><figure id="94daa077-fd7e-48b5-87d6-626f3221fe11" class="image"><a href="NDS(Nkia%20DesignSystem)/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-07-11_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_8.54.59.png"><img style="width:331.97918701171875px" src="NDS(Nkia%20DesignSystem)/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-07-11_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_8.54.59.png"/></a></figure></div><div style="display:contents" dir="ltr"><figure id="62bea768-3f5b-403c-a458-aec8b407ee31" class="image"><a href="NDS(Nkia%20DesignSystem)/b01bb6c9-5655-45b9-bbae-41592de20580.png"><img style="width:411.84041184041183px" src="NDS(Nkia%20DesignSystem)/b01bb6c9-5655-45b9-bbae-41592de20580.png"/></a></figure></div><div style="display:contents" dir="ltr"><figure id="f014ad8b-a4e2-41bc-8070-6a0a7ecd3de2" class="image"><a href="NDS(Nkia%20DesignSystem)/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-07-11_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_9.05.21.png"><img style="width:720px" src="NDS(Nkia%20DesignSystem)/%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2024-07-11_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_9.05.21.png"/></a></figure></div></div></div></div></div><div style="display:contents" dir="auto"><p id="ca7fde3b-0b97-44a1-b07a-c20a721ac38d" class="">
+</p></div><div style="display:contents" dir="auto"><p id="22533237-88dc-4426-b1af-b732b718d113" class="">
+</p></div><div style="display:contents" dir="auto"><p id="2fdda7c3-1f49-4532-afac-8140e48fbeb3" class="">
+</p></div><div style="display:contents" dir="auto"><h2 id="241dd9b5-2947-8095-9f29-fd5415fe2597" class="">🏆 Achievements</h2></div><div style="display:contents" dir="auto"><ul id="365dd9b5-2947-8075-96dc-f5ed066b7c18" class="bulleted-list"><li style="list-style-type:disc">공통 UI 컴포넌트와 디자인 시스템을 구축하여 제품 간 UI 일관성과 유지보수성 향상</li></ul></div><div style="display:contents" dir="auto"><ul id="365dd9b5-2947-80f3-a8f8-ea16d698ca63" class="bulleted-list"><li style="list-style-type:disc">반복적으로 사용되는 UI 패턴을 공통화하여 신규 화면 개발 생산성 개선</li></ul></div><div style="display:contents" dir="auto"><ul id="365dd9b5-2947-8046-95d6-d04e75228d39" class="bulleted-list"><li style="list-style-type:disc">Storybook 기반 문서화를 통해 컴포넌트 사용성과 협업 효율 향상</li></ul></div><div style="display:contents" dir="auto"><ul id="365dd9b5-2947-8082-86d8-d0387bc1d431" class="bulleted-list"><li style="list-style-type:disc">범용 구조의 공통 컴포넌트 설계를 통해 다양한 운영 제품 요구사항 대응</li></ul></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

@@ -1,0 +1,5 @@
+[    2777ms] [WARNING] Failed to execute 'postMessage' on 'DOMWindow': The target origin provided ('https://www.youtube.com') does not match the recipient window's origin ('https://www.google.com'). @ https://www.youtube.com/s/player/9fc68080/www-widgetapi.vflset/www-widgetapi.js:209
+[    3270ms] [WARNING] setPolicyInfo {versionInfo: Object, sdkInfo: Object, sentryInfo: Object} @ https://ssl.pstatic.net/tveta/libs/glad/prod/gfp-core.js:0
+[    4642ms] [WARNING] Failed to execute 'postMessage' on 'DOMWindow': The target origin provided ('https://shopsquare.naver.com') does not match the recipient window's origin ('https://www.naver.com'). @ https://pm.pstatic.net/resources/js/main.c04dfb5f.js?o=www:1
+[    4642ms] [WARNING] Failed to execute 'postMessage' on 'DOMWindow': The target origin provided ('https://recoshopping.naver.com') does not match the recipient window's origin ('https://www.naver.com'). @ https://pm.pstatic.net/resources/js/main.c04dfb5f.js?o=www:1
+[   11689ms] [WARNING] setPolicyInfo {versionInfo: Object, sdkInfo: Object, sentryInfo: Object} @ https://ssl.pstatic.net/tveta/libs/glad/prod/gfp-core.js:0

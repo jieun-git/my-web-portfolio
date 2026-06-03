@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 220 20% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 10%;
+    --primary: 214 100% 29%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 220 14% 93%;
+    --secondary-foreground: 220 20% 20%;
+    --muted: 220 14% 93%;
+    --muted-foreground: 220 10% 46%;
+    --accent: 220 14% 93%;
+    --accent-foreground: 220 20% 20%;
+    --border: 220 13% 88%;
+    --input: 220 13% 88%;
+    --ring: 214 100% 29%;
+    --radius: 0.5rem;
+    --teal: 214 100% 41%;
+    --teal-dim: 214 60% 30%;
+  }
+
+  .dark {
+    --background: 228 20% 6%;
+    --foreground: 210 17% 90%;
+    --card: 228 18% 9%;
+    --card-foreground: 210 17% 90%;
+    --popover: 228 18% 9%;
+    --popover-foreground: 210 17% 90%;
+    --primary: 214 90% 58%;
+    --primary-foreground: 228 20% 6%;
+    --secondary: 228 16% 14%;
+    --secondary-foreground: 210 17% 80%;
+    --muted: 228 16% 14%;
+    --muted-foreground: 218 11% 52%;
+    --accent: 228 16% 14%;
+    --accent-foreground: 210 17% 80%;
+    --border: 228 15% 16%;
+    --input: 228 15% 16%;
+    --ring: 214 90% 58%;
+    --teal: 214 90% 58%;
+    --teal-dim: 214 55% 35%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
+
+/* 스캔라인 텍스처 — 다크 모드에서만 표시 */
+.dark body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.03) 2px,
+    rgba(0, 0, 0, 0.03) 4px
+  );
+}
+
+/* 그리드 배경 패턴 */
+.grid-bg {
+  background-image:
+    linear-gradient(hsl(var(--border)) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(var(--border)) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* fade-in 애니메이션 */
+.animate-in {
+  animation: fadeUp 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+/* 터미널 커서 */
+.cursor::after {
+  content: '_';
+  @apply animate-blink text-teal;
+}
+
+/* 스크롤바 스타일 */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-background;
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--teal) / 0.4);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--teal) / 0.7);
+}

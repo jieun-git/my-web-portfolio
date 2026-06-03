@@ -1,0 +1,155 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "Jieun" [ref=e4] [cursor=pointer]:
+        - /url: /
+      - navigation [ref=e5]:
+        - link "About" [ref=e6] [cursor=pointer]:
+          - /url: /#about
+        - link "Experience" [ref=e7] [cursor=pointer]:
+          - /url: /#experience
+        - link "Projects" [ref=e8] [cursor=pointer]:
+          - /url: /#projects
+        - link "Skills" [ref=e9] [cursor=pointer]:
+          - /url: /#skills
+        - link "Contact" [ref=e10] [cursor=pointer]:
+          - /url: /#contact
+      - button "테마 전환" [ref=e12] [cursor=pointer]:
+        - img [ref=e13]
+  - main [ref=e19]:
+    - img "Polestar10 배너" [ref=e24]
+    - generic [ref=e25]:
+      - link "목록으로" [ref=e26] [cursor=pointer]:
+        - /url: /#projects
+        - img [ref=e27]
+        - text: 목록으로
+      - generic [ref=e29]:
+        - heading "Polestar10" [level=1] [ref=e31]
+        - generic [ref=e35]:
+          - generic [ref=e36]:
+            - img [ref=e37]
+            - text: 2023.03 ~ 현재
+          - generic [ref=e39]:
+            - img [ref=e40]
+            - text: 8개 기술 스택
+      - generic [ref=e44]:
+        - region "Overview" [ref=e45]:
+          - heading "Overview" [level=2] [ref=e46]: Overview
+          - list [ref=e48]:
+            - listitem [ref=e49]:
+              - generic [ref=e51]: 다양한 모니터링 솔루션(EMS, APM, NMS, ITSM 등)을 통합한 On-premise 기반 통합 운영 플랫폼입니다.
+            - listitem [ref=e52]:
+              - generic [ref=e54]: 대시보드, 알람, 정책 관리 등 모니터링 기능을 하나의 UI 환경에서 제공하여 운영 효율 향상과 빠른 장애 대응을 지원합니다.
+            - listitem [ref=e55]:
+              - generic [ref=e57]: MSA 와 MFA(Micro Front-end Architecture) 환경 기반으로 구성된 프로젝트입니다.
+        - region [ref=e58]:
+          - heading "Role & Contribution" [level=2] [ref=e59]: Role & Contribution
+          - list [ref=e61]:
+            - listitem [ref=e62]:
+              - generic [ref=e64]: React / TypeScript 기반 모니터링 UI 개발 및 고도화
+            - listitem [ref=e65]:
+              - generic [ref=e67]: 대시보드, 알람 정책, 커스텀 모니터링 등 복잡한 관리 화면 구현
+            - listitem [ref=e68]:
+              - generic [ref=e70]: 공통 컴포넌트와 유틸리티 모듈화를 통한 재사용성 및 유지보수성 개선
+            - listitem [ref=e71]:
+              - generic [ref=e73]: ag-Grid, ECharts 기반 대용량 데이터 UI 및 시각화 기능 구현
+            - listitem [ref=e74]:
+              - generic [ref=e76]: 디자인 시스템과 실제 운영 요구사항을 고려한 UI 구조 설계
+        - region [ref=e77]:
+          - heading "Key Implementation" [level=2] [ref=e78]: Key Implementation
+          - list [ref=e80]:
+            - listitem [ref=e81]:
+              - generic [ref=e83]: 운영 환경의 핵심 정보를 통합 대시보드 형태로 시각화하는 포털 페이지 개발
+            - listitem [ref=e84]:
+              - generic [ref=e86]: Apache ECharts 기반 차트 및 데이터 시각화 구현
+            - listitem [ref=e87]:
+              - generic [ref=e89]: 레이아웃 유연성과 사용자 인터랙션을 고려하여 커스텀 UI 컴포넌트 개발
+            - listitem [ref=e90]:
+              - generic [ref=e92]: 반응형 UI 및 CSS 애니메이션을 적용한 UX 개선
+            - listitem [ref=e93]:
+              - generic [ref=e95]: 알람 정책, 수집 정책, 유지보수 작업 등 복잡한 운영 정책 관리 화면 개발
+            - listitem [ref=e96]:
+              - generic [ref=e98]: Step 기반 입력 흐름과 실시간 Validation 구조를 설계하여 사용자 입력 오류 최소화
+            - listitem [ref=e99]:
+              - generic [ref=e101]: 스케줄 입력값을 Cron 표현식으로 변환하는 로직 구현
+            - listitem [ref=e102]:
+              - generic [ref=e104]: 정책 유형에 따라 동적으로 변경되는 UI 구조 설계
+            - listitem [ref=e105]:
+              - generic [ref=e107]: 과거 성능 데이터를 기반으로 추천된 임계치를 시각적으로 확인할 수 있는 UI 개발
+            - listitem [ref=e108]:
+              - generic [ref=e110]: 차트 상에서 임계값 라인을 실시간으로 제어할 수 있도록 인터랙션 구현
+            - listitem [ref=e111]:
+              - generic [ref=e113]: 사용자 입력값과 AI 추천값을 함께 비교할 수 있는 UI 흐름 설계
+            - listitem [ref=e114]:
+              - generic [ref=e116]: 관리자 설정 기반의 비밀번호 정책을 동적으로 검증할 수 있는 Validation 컴포넌트 구현
+            - listitem [ref=e117]:
+              - generic [ref=e119]: 정규식(RegExp) 기반 실시간 유효성 검사 및 사용자 피드백 제공
+            - listitem [ref=e120]:
+              - generic [ref=e122]: 외부 Validation 라이브러리 없이 React 기반으로 직접 구현
+        - region "Achievements" [ref=e123]:
+          - heading "Achievements" [level=2] [ref=e124]: Achievements
+          - list [ref=e126]:
+            - listitem [ref=e127]:
+              - generic [ref=e129]: 복잡한 운영 정책과 관리 기능을 단계별 UI 흐름으로 구조화하여 사용자 입력 부담 감소
+            - listitem [ref=e130]:
+              - generic [ref=e132]: 공통 컴포넌트 및 유틸리티 모듈화를 통해 유지보수성과 재사용성 향상
+            - listitem [ref=e133]:
+              - generic [ref=e135]: ag-Grid, ECharts, Ant Design 기반 운영형 UI 개발 경험 확보
+            - listitem [ref=e136]:
+              - generic [ref=e138]: 운영 환경에 필요한 다양한 관리 기능을 하나의 UI 환경으로 통합하여 UX 개선
+        - region "Tech Stack" [ref=e139]:
+          - heading "Tech Stack" [level=2] [ref=e140]: Tech Stack
+          - generic [ref=e142]:
+            - generic [ref=e143]: React
+            - generic [ref=e144]: TypeScript
+            - generic [ref=e145]: Recoil
+            - generic [ref=e146]: ag-Grid
+            - generic [ref=e147]: Apache ECharts
+            - generic [ref=e148]: Ant Design
+            - generic [ref=e149]: SCSS
+            - generic [ref=e150]: Figma
+        - region "Screenshots" [ref=e151]:
+          - heading "Screenshots" [level=2] [ref=e152]: Screenshots
+          - generic [ref=e154]:
+            - generic [ref=e155]:
+              - img "Polestar10 스크린샷 3" [ref=e191]
+              - button "이전 이미지" [ref=e157] [cursor=pointer]:
+                - img [ref=e158]
+              - button "다음 이미지" [ref=e160] [cursor=pointer]:
+                - img [ref=e161]
+            - generic [ref=e163]:
+              - button "Polestar10 스크린샷 2 보기" [ref=e164] [cursor=pointer]:
+                - img [ref=e165]
+              - button "Polestar10 스크린샷 3 보기" [ref=e166] [cursor=pointer]:
+                - img [ref=e167]
+              - button "Polestar10 스크린샷 4 보기" [ref=e168] [cursor=pointer]:
+                - img [ref=e169]
+              - button "Polestar10 스크린샷 5 보기" [ref=e170] [cursor=pointer]:
+                - img [ref=e171]
+              - button "Polestar10 스크린샷 6 보기" [ref=e172] [cursor=pointer]:
+                - img [ref=e173]
+              - button "Polestar10 스크린샷 7 보기" [ref=e174] [cursor=pointer]:
+                - img [ref=e175]
+              - button "Polestar10 스크린샷 8 보기" [ref=e176] [cursor=pointer]:
+                - img [ref=e177]
+              - button "Polestar10 스크린샷 9 보기" [ref=e178] [cursor=pointer]:
+                - img [ref=e179]
+              - button "Polestar10 스크린샷 10 보기" [ref=e180] [cursor=pointer]:
+                - img [ref=e181]
+          - dialog "Polestar10 이미지 확대 보기" [ref=e192]:
+            - button "닫기" [ref=e193] [cursor=pointer]:
+              - img [ref=e194]
+            - img "Polestar10 스크린샷 3" [ref=e197]
+            - button "이전 이미지" [ref=e198] [cursor=pointer]:
+              - img [ref=e199]
+            - button "다음 이미지" [ref=e201] [cursor=pointer]:
+              - img [ref=e202]
+      - link "다른 프로젝트 보기" [ref=e183] [cursor=pointer]:
+        - /url: /#projects
+        - img [ref=e184]
+        - text: 다른 프로젝트 보기
+  - contentinfo [ref=e186]:
+    - generic [ref=e187]:
+      - paragraph [ref=e188]: © 2026 Jieun Ahn. All rights reserved.
+      - paragraph [ref=e189]: Built with Next.js · TypeScript · Tailwind CSS
+  - alert [ref=e190]
