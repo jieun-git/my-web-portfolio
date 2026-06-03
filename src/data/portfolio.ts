@@ -36,10 +36,10 @@ export const strengths: Strength[] = [
 
 export const experiences: ExperienceItem[] = [
   {
-    company: '(주)엔키아',
+    company: '엔키아',
     role: 'Frontend Developer',
     period: '2021.11 ~ 재직 중',
-    description: 'AIOps 기반 B2B 통합 모니터링 솔루션 및 디자인 시스템 프론트엔드 개발',
+    description: 'B2B 모니터링 솔루션 및 디자인시스템 프론트엔드 개발',
     current: true,
   },
   {
@@ -47,7 +47,6 @@ export const experiences: ExperienceItem[] = [
     role: 'Frontend Developer (인턴)',
     period: '2020.01 ~ 2020.06',
     description: '차량용 애플리케이션 퍼블리싱 및 프론트엔드 개발 보조',
-    tech: ['Vue', 'HTML', 'CSS', 'JavaScript'],
     isIntern: true,
   },
 ];
@@ -430,7 +429,7 @@ export const skills: SkillCategory[] = [
   },
   {
     name: 'Tools',
-    items: ['Figma', 'Storybook', 'Git'],
+    items: ['Figma', 'Storybook', 'Git', 'Claude', 'Cursor'],
   },
 ];
 

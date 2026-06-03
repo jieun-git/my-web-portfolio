@@ -15,7 +15,7 @@ const config: Config = {
       },
       colors: {
         w98: {
-          desktop: '#008080',
+          desktop: '#5590b5',
           silver: '#c0c0c0',
           light: '#dfdfdf',
           dark: '#808080',

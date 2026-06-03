@@ -24,7 +24,7 @@ interface WinState {
 const WINDOW_CONFIGS: Record<string, { title: string; icon: string; size: { width: number; height: number }; statusLeft?: string; statusRight?: string }> = {
   readme:     { title: '환영합니다 - 메모장', icon: '📝', size: { width: 480, height: 300 }, statusLeft: 'Ln 1, Col 1', statusRight: 'readme.txt' },
   about:      { title: 'About - 안지은',     icon: '👤', size: { width: 460, height: 420 }, statusLeft: '준비됨', statusRight: 'about.exe' },
-  experience: { title: 'Experience - 경력',  icon: '💼', size: { width: 460, height: 380 }, statusLeft: '준비됨', statusRight: '2 항목' },
+  experience: { title: 'Career - 경력',      icon: '💼', size: { width: 460, height: 380 }, statusLeft: '준비됨', statusRight: '2 항목' },
   projects:   { title: 'Projects',           icon: '📁', size: { width: 480, height: 340 }, statusLeft: `${projects.length} 개체`, statusRight: '더블클릭하여 열기' },
   skills:     { title: 'Skills - 기술 스택', icon: '⚙️', size: { width: 480, height: 380 }, statusLeft: '준비됨', statusRight: '6 분류' },
   contact:    { title: 'Contact - 연락처',   icon: '✉️', size: { width: 440, height: 420 }, statusLeft: '준비됨', statusRight: 'contact.exe' },
@@ -32,7 +32,7 @@ const WINDOW_CONFIGS: Record<string, { title: string; icon: string; size: { widt
 
 const DESKTOP_ICONS = [
   { id: 'about',      icon: '👤', label: 'About\n안지은' },
-  { id: 'experience', icon: '💼', label: 'Experience' },
+  { id: 'experience', icon: '💼', label: 'Career' },
   { id: 'projects',   icon: '📁', label: 'Projects' },
   { id: 'skills',     icon: '⚙️', label: 'Skills' },
   { id: 'contact',    icon: '✉️', label: 'Contact' },
@@ -164,6 +164,47 @@ export default function Desktop() {
       className="fixed inset-0 overflow-hidden bg-w98-desktop"
       onClick={() => setSelectedIcon(null)}
     >
+      {/* Windows 98 배경 로고 */}
+      <div
+        className="absolute inset-0 flex items-center justify-center pointer-events-none select-none"
+        style={{ zIndex: 1 }}
+      >
+        <div className="flex flex-col items-center" style={{ marginBottom: '36px' }}>
+          <svg viewBox="0 0 155 148" width="175" height="167" aria-hidden="true">
+            {/* 산개 픽셀 - 왼쪽 상단 (빨강) */}
+            <rect x="2"  y="44" width="5" height="6" fill="#c4706a"/>
+            <rect x="1"  y="54" width="5" height="5" fill="#c4706a"/>
+            <rect x="3"  y="64" width="4" height="5" fill="#c4706a"/>
+            <rect x="2"  y="73" width="4" height="5" fill="#c4706a"/>
+            {/* 산개 픽셀 - 왼쪽 하단 (파랑) */}
+            <rect x="2"  y="98"  width="5" height="6" fill="#4d70b0"/>
+            <rect x="1"  y="108" width="5" height="5" fill="#4d70b0"/>
+            <rect x="3"  y="118" width="4" height="5" fill="#4d70b0"/>
+            <rect x="2"  y="127" width="4" height="5" fill="#4d70b0"/>
+            {/* 산개 픽셀 - 위쪽 (빨강) */}
+            <rect x="18" y="24" width="6" height="4" fill="#c4706a"/>
+            <rect x="28" y="20" width="6" height="4" fill="#c4706a"/>
+            <rect x="40" y="17" width="6" height="4" fill="#c4706a"/>
+            {/* 산개 픽셀 - 위쪽 (초록) */}
+            <rect x="80"  y="10" width="6" height="4" fill="#7ab57a"/>
+            <rect x="94"  y="6"  width="6" height="4" fill="#7ab57a"/>
+            <rect x="108" y="3"  width="6" height="4" fill="#7ab57a"/>
+            <rect x="122" y="1"  width="6" height="4" fill="#7ab57a"/>
+            {/* 메인 사분면 */}
+            <polygon points="10,42 68,26 68,80 10,92"     fill="#c4706a"/>
+            <polygon points="74,23 146,5 146,63 74,78"    fill="#7ab57a"/>
+            <polygon points="10,97 68,84 68,138 10,150"   fill="#4d70b0"/>
+            <polygon points="74,82 146,67 146,127 74,145" fill="#c9aa44"/>
+          </svg>
+          <div
+            className="text-black"
+            style={{ fontFamily: 'Arial, sans-serif', fontSize: '50px', fontWeight: 900, lineHeight: 1, letterSpacing: '-0.01em', marginTop: '4px' }}
+          >
+            Jieun Ahn
+          </div>
+        </div>
+      </div>
+
       {/* 바탕화면 아이콘 */}
       <div className="absolute left-2 top-4 flex flex-col gap-2 z-10">
         {DESKTOP_ICONS.map((icon) => (

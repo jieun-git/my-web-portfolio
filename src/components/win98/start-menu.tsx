@@ -7,7 +7,7 @@ interface StartMenuProps {
 
 const menuItems = [
   { id: 'about', icon: '👤', label: 'About', sub: '소개' },
-  { id: 'experience', icon: '💼', label: 'Experience', sub: '경력' },
+  { id: 'experience', icon: '💼', label: 'Career', sub: '경력' },
   { id: 'projects', icon: '📁', label: 'Projects', sub: '프로젝트' },
   { id: 'skills', icon: '⚙️', label: 'Skills', sub: '기술 스택' },
   { id: 'contact', icon: '✉️', label: 'Contact', sub: '연락처' },
@@ -40,7 +40,7 @@ export function StartMenu({ onOpen, onClose }: StartMenuProps) {
       <div className="fixed inset-0 z-[9099]" onClick={onClose} />
       <div className="w98-menu">
         <div className="w98-menu-sidebar">
-          <span>Windows 95</span>
+          <span>Jieun Ahn</span>
         </div>
         <div className="w98-menu-items">
           {menuItems.map((item) => (
