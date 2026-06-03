@@ -1,19 +1,11 @@
 import type { Metadata } from 'next';
-import { Noto_Sans_KR, JetBrains_Mono } from 'next/font/google';
-import { ThemeProvider } from '@/components/theme-provider';
+import { Noto_Sans_KR } from 'next/font/google';
 import './globals.css';
 
 const notoSansKr = Noto_Sans_KR({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
   variable: '--font-noto-sans-kr',
-  display: 'swap',
-});
-
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ['latin'],
-  weight: ['400', '500', '700'],
-  variable: '--font-jetbrains-mono',
   display: 'swap',
 });
 
@@ -41,16 +33,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ko" suppressHydrationWarning>
-      <body className={`${notoSansKr.variable} ${jetbrainsMono.variable}`}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem={false}
-          disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
+    <html lang="ko" style={{ overflow: 'hidden', height: '100%' }}>
+      <body className={notoSansKr.variable} style={{ overflow: 'hidden', height: '100%', margin: 0 }}>
+        {children}
       </body>
     </html>
   );

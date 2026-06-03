@@ -3,125 +3,359 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
-    --background: 0 0% 98%;
-    --foreground: 220 20% 10%;
-    --card: 0 0% 100%;
-    --card-foreground: 220 20% 10%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 220 20% 10%;
-    --primary: 214 100% 29%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 220 14% 93%;
-    --secondary-foreground: 220 20% 20%;
-    --muted: 220 14% 93%;
-    --muted-foreground: 220 10% 46%;
-    --accent: 220 14% 93%;
-    --accent-foreground: 220 20% 20%;
-    --border: 220 13% 88%;
-    --input: 220 13% 88%;
-    --ring: 214 100% 29%;
-    --radius: 0.5rem;
-    --teal: 214 100% 41%;
-    --teal-dim: 214 60% 30%;
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; overflow: hidden; }
+  body { font-family: 'Tahoma', 'MS Sans Serif', var(--font-noto-sans-kr), sans-serif; font-size: 13px; }
+}
+
+@layer components {
+  /* ── Window chrome ── */
+  .w98-window {
+    background: #c0c0c0;
+    border: 2px solid;
+    border-color: #dfdfdf #808080 #808080 #dfdfdf;
+    outline: 1px solid #000;
+    box-shadow: 1px 1px 0 #000;
+    position: absolute;
+  }
+  .w98-titlebar {
+    background: linear-gradient(to right, #000080, #1084d0);
+    color: #fff;
+    font-weight: bold;
+    font-size: 12px;
+    padding: 3px 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    user-select: none;
+    cursor: default;
+    gap: 4px;
+  }
+  .w98-titlebar-inactive {
+    background: linear-gradient(to right, #7b7b7b, #acacac);
   }
 
-  .dark {
-    --background: 228 20% 6%;
-    --foreground: 210 17% 90%;
-    --card: 228 18% 9%;
-    --card-foreground: 210 17% 90%;
-    --popover: 228 18% 9%;
-    --popover-foreground: 210 17% 90%;
-    --primary: 214 90% 58%;
-    --primary-foreground: 228 20% 6%;
-    --secondary: 228 16% 14%;
-    --secondary-foreground: 210 17% 80%;
-    --muted: 228 16% 14%;
-    --muted-foreground: 218 11% 52%;
-    --accent: 228 16% 14%;
-    --accent-foreground: 210 17% 80%;
-    --border: 228 15% 16%;
-    --input: 228 15% 16%;
-    --ring: 214 90% 58%;
-    --teal: 214 90% 58%;
-    --teal-dim: 214 55% 35%;
+  /* ── Buttons ── */
+  .w98-btn {
+    background: #c0c0c0;
+    border: 2px solid;
+    border-color: #dfdfdf #808080 #808080 #dfdfdf;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    line-height: 1;
+    user-select: none;
   }
-}
+  .w98-btn:active { border-color: #808080 #dfdfdf #dfdfdf #808080; }
 
-@layer base {
-  * {
-    @apply border-border;
+  .w98-close-btn {
+    width: 16px;
+    height: 14px;
+    font-size: 10px;
+    font-weight: bold;
+    background: #c0c0c0;
+    border: 2px solid;
+    border-color: #dfdfdf #808080 #808080 #dfdfdf;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
   }
-  html {
-    scroll-behavior: smooth;
+  .w98-close-btn:active { border-color: #808080 #dfdfdf #dfdfdf #808080; }
+
+  /* ── Inset / content areas ── */
+  .w98-inset {
+    border: 2px solid;
+    border-color: #808080 #dfdfdf #dfdfdf #808080;
+    background: #fff;
   }
-  body {
-    @apply bg-background text-foreground font-sans antialiased;
+
+  /* ── Status bar ── */
+  .w98-statusbar {
+    background: #c0c0c0;
+    border-top: 1px solid #808080;
+    padding: 2px 4px;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4px;
   }
-}
-
-/* 스캔라인 텍스처 — 다크 모드에서만 표시 */
-.dark body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 9999;
-  background: repeating-linear-gradient(
-    0deg,
-    transparent,
-    transparent 2px,
-    rgba(0, 0, 0, 0.03) 2px,
-    rgba(0, 0, 0, 0.03) 4px
-  );
-}
-
-/* 그리드 배경 패턴 */
-.grid-bg {
-  background-image:
-    linear-gradient(hsl(var(--border)) 1px, transparent 1px),
-    linear-gradient(90deg, hsl(var(--border)) 1px, transparent 1px);
-  background-size: 40px 40px;
-}
-
-/* fade-in 애니메이션 */
-.animate-in {
-  animation: fadeUp 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-}
-
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(28px);
+  .w98-statusbar-panel {
+    border: 1px solid;
+    border-color: #808080 #dfdfdf #dfdfdf #808080;
+    padding: 1px 8px;
+    font-size: 11px;
+    white-space: nowrap;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+
+  /* ── Taskbar ── */
+  .w98-taskbar {
+    background: #c0c0c0;
+    border-top: 2px solid #dfdfdf;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    padding: 2px 4px;
+    gap: 2px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9000;
   }
-}
+  .w98-start-btn {
+    background: #c0c0c0;
+    border: 2px solid;
+    border-color: #dfdfdf #808080 #808080 #dfdfdf;
+    padding: 2px 8px;
+    font-weight: bold;
+    font-size: 13px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    height: 28px;
+    white-space: nowrap;
+    user-select: none;
+  }
+  .w98-start-btn:active,
+  .w98-start-btn.active { border-color: #808080 #dfdfdf #dfdfdf #808080; background: #b0b0b0; }
 
-.opacity-0 {
-  opacity: 0;
-}
+  .w98-taskbar-btn {
+    background: #c0c0c0;
+    border: 2px solid;
+    border-color: #dfdfdf #808080 #808080 #dfdfdf;
+    padding: 2px 8px;
+    cursor: pointer;
+    height: 28px;
+    min-width: 100px;
+    max-width: 160px;
+    text-align: left;
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    user-select: none;
+  }
+  .w98-taskbar-btn.active { border-color: #808080 #dfdfdf #dfdfdf #808080; background: #b8b8b8; }
 
-/* 터미널 커서 */
-.cursor::after {
-  content: '_';
-  @apply animate-blink text-teal;
-}
+  /* ── Start menu ── */
+  .w98-menu {
+    background: #c0c0c0;
+    border: 2px solid;
+    border-color: #dfdfdf #808080 #808080 #dfdfdf;
+    outline: 1px solid #000;
+    position: fixed;
+    bottom: 36px;
+    left: 4px;
+    z-index: 9100;
+    min-width: 200px;
+    display: flex;
+  }
+  .w98-menu-sidebar {
+    background: linear-gradient(to bottom, #808080, #404040);
+    width: 22px;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 4px;
+  }
+  .w98-menu-sidebar span {
+    color: #c0c0c0;
+    font-size: 14px;
+    font-weight: bold;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    letter-spacing: 2px;
+    user-select: none;
+  }
+  .w98-menu-items { flex: 1; padding: 2px 0; }
+  .w98-menu-item {
+    padding: 5px 16px 5px 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    white-space: nowrap;
+    user-select: none;
+  }
+  .w98-menu-item:hover { background: #000080; color: #fff; }
+  .w98-menu-divider {
+    border-top: 1px solid #808080;
+    border-bottom: 1px solid #dfdfdf;
+    margin: 2px 0;
+  }
 
-/* 스크롤바 스타일 */
-::-webkit-scrollbar {
-  width: 6px;
-}
-::-webkit-scrollbar-track {
-  @apply bg-background;
-}
-::-webkit-scrollbar-thumb {
-  background: hsl(var(--teal) / 0.4);
-  border-radius: 3px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: hsl(var(--teal) / 0.7);
+  /* ── Desktop icons ── */
+  .w98-desktop-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    padding: 4px;
+    width: 68px;
+    border: 1px dotted transparent;
+    user-select: none;
+  }
+  .w98-desktop-icon:focus,
+  .w98-desktop-icon.selected {
+    border-color: rgba(255,255,255,0.6);
+    background: rgba(0,0,128,0.4);
+    outline: none;
+  }
+  .w98-desktop-icon-label {
+    color: #fff;
+    font-size: 11px;
+    text-align: center;
+    text-shadow: 1px 1px 1px #000, -1px -1px 1px #000, 1px -1px 1px #000, -1px 1px 1px #000;
+    margin-top: 3px;
+    line-height: 1.3;
+    word-break: break-word;
+  }
+
+  /* ── Content area badges / tags ── */
+  .w98-badge-active {
+    background: #008080;
+    color: #fff;
+    font-size: 11px;
+    padding: 1px 6px;
+    border: 1px solid #000;
+  }
+  .w98-badge-gray {
+    background: #808080;
+    color: #fff;
+    font-size: 11px;
+    padding: 1px 6px;
+    border: 1px solid #000;
+  }
+  .w98-tag {
+    background: #c0c0c0;
+    border: 2px solid;
+    border-color: #dfdfdf #808080 #808080 #dfdfdf;
+    padding: 2px 8px;
+    font-size: 12px;
+    display: inline-block;
+    cursor: default;
+  }
+
+  /* ── Folder window file icons ── */
+  .w98-file-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    padding: 6px;
+    width: 90px;
+    border: 1px dotted transparent;
+    user-select: none;
+  }
+  .w98-file-icon:hover,
+  .w98-file-icon.selected {
+    background: rgba(0, 0, 128, 0.3);
+    border-color: rgba(0, 0, 128, 0.5);
+  }
+  .w98-file-icon-label {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 4px;
+    word-break: break-word;
+    line-height: 1.3;
+  }
+
+  /* ── Form inputs ── */
+  .w98-input {
+    border: 2px solid;
+    border-color: #808080 #dfdfdf #dfdfdf #808080;
+    background: #fff;
+    padding: 2px 4px;
+    width: 100%;
+    font-size: 13px;
+    font-family: inherit;
+    outline: none;
+  }
+  .w98-textarea {
+    border: 2px solid;
+    border-color: #808080 #dfdfdf #dfdfdf #808080;
+    background: #fff;
+    padding: 4px;
+    width: 100%;
+    font-size: 13px;
+    font-family: inherit;
+    resize: none;
+    outline: none;
+  }
+
+  /* ── Menu bar (Notepad style) ── */
+  .w98-menubar {
+    background: #c0c0c0;
+    border-bottom: 1px solid #808080;
+    padding: 2px 4px;
+    display: flex;
+    gap: 0;
+  }
+  .w98-menubar-item {
+    padding: 2px 6px;
+    font-size: 13px;
+    cursor: pointer;
+  }
+  .w98-menubar-item:hover { background: #000080; color: #fff; }
+
+  /* ── Notepad content ── */
+  .w98-notepad-content {
+    padding: 8px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 13px;
+    white-space: pre-wrap;
+    overflow-y: auto;
+    background: #fff;
+    line-height: 1.5;
+  }
+
+  /* ── Scrollbar ── */
+  .w98-scroll::-webkit-scrollbar { width: 16px; height: 16px; }
+  .w98-scroll::-webkit-scrollbar-track { background: #c0c0c0; }
+  .w98-scroll::-webkit-scrollbar-thumb {
+    background: #c0c0c0;
+    border: 2px solid;
+    border-color: #dfdfdf #808080 #808080 #dfdfdf;
+  }
+  .w98-scroll::-webkit-scrollbar-button {
+    background: #c0c0c0;
+    border: 2px solid;
+    border-color: #dfdfdf #808080 #808080 #dfdfdf;
+    display: block;
+    height: 16px;
+  }
+
+  /* ── Divider ── */
+  .w98-divider {
+    border-top: 1px solid #808080;
+    border-bottom: 1px solid #dfdfdf;
+    margin: 8px 0;
+  }
+
+  /* ── Section heading (like folder category) ── */
+  .w98-section-heading {
+    color: #000080;
+    font-size: 12px;
+    font-weight: bold;
+    border-bottom: 1px solid #000080;
+    padding-bottom: 2px;
+    margin-bottom: 6px;
+  }
+
+  /* ── Contact link ── */
+  .w98-link {
+    color: #000080;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  .w98-link:hover { color: #0000ff; }
 }

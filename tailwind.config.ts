@@ -14,6 +14,17 @@ const config: Config = {
         mono: ['var(--font-jetbrains-mono)', 'monospace'],
       },
       colors: {
+        w98: {
+          desktop: '#008080',
+          silver: '#c0c0c0',
+          light: '#dfdfdf',
+          dark: '#808080',
+          navy: '#000080',
+          white: '#ffffff',
+          black: '#000000',
+          blue: '#1084d0',
+          inset: '#868a8e',
+        },
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         card: {

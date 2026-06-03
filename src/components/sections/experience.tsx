@@ -1,73 +1,43 @@
-import { SectionTitle } from '@/components/common/section-title';
-import { AnimatedSection } from '@/components/common/animated-section';
-import { Badge } from '@/components/ui/badge';
-import { experiences } from '@/data/portfolio';
-import { cn } from '@/lib/utils';
+import { experiences, certificate } from '@/data/portfolio';
 
-export function Experience() {
+export function ExperienceContent() {
   return (
-    <section id="experience" className="py-24" aria-labelledby="experience-title">
-      <div className="mx-auto max-w-6xl px-6">
-        <AnimatedSection>
-          <SectionTitle index="02" title="Experience" />
-        </AnimatedSection>
+    <div className="flex flex-col h-full overflow-hidden">
+      <div className="flex-1 overflow-y-auto w98-scroll p-4 space-y-4">
+        <div className="w98-section-heading text-base font-bold">경력</div>
 
-        <div className="relative">
-          {/* 타임라인 세로선 */}
-          <div className="absolute left-[11px] top-0 bottom-0 w-px bg-gradient-to-b from-teal/50 via-border to-transparent" />
+        {experiences.map((exp, i) => (
+          <div key={exp.company}>
+            {i > 0 && <div className="w98-divider my-4" />}
+            <div className="flex items-start justify-between gap-2 mb-1">
+              <span className="font-bold text-sm">{exp.company}</span>
+              {exp.current && <span className="w98-badge-active text-xs flex-shrink-0">재직 중</span>}
+              {exp.isIntern && <span className="w98-badge-gray text-xs flex-shrink-0">인턴</span>}
+            </div>
+            <div className="text-xs text-w98-dark mb-1">
+              {exp.role} · {exp.period}
+            </div>
+            <p className="text-sm leading-relaxed">{exp.description}</p>
+            {exp.tech && (
+              <div className="flex flex-wrap gap-1 mt-2">
+                {exp.tech.map((t) => (
+                  <span key={t} className="w98-tag text-xs">{t}</span>
+                ))}
+              </div>
+            )}
+          </div>
+        ))}
 
-          <div className="space-y-10">
-            {experiences.map((exp, i) => (
-              <AnimatedSection key={exp.company} delay={i * 100}>
-                <div className="relative flex gap-8 pl-8">
-                  {/* 타임라인 점 */}
-                  <div
-                    className={cn(
-                      'absolute left-0 top-1.5 h-5 w-5 flex items-center justify-center',
-                      'rounded-full border-2 bg-background',
-                      exp.current ? 'border-teal' : 'border-border'
-                    )}
-                  >
-                    {exp.current && (
-                      <div className="h-2 w-2 rounded-full bg-teal animate-pulse" />
-                    )}
-                  </div>
-
-                  <div className="flex-1">
-                    {/* 회사 헤더 */}
-                    <div className="flex flex-wrap items-baseline gap-3 mb-1">
-                      <h3 className="text-lg font-bold text-foreground">{exp.company}</h3>
-                      {exp.isIntern && (
-                        <Badge variant="outline" className="text-[10px]">인턴</Badge>
-                      )}
-                      {exp.current && (
-                        <Badge variant="teal" className="text-[10px]">재직 중</Badge>
-                      )}
-                    </div>
-
-                    <div className="mb-3 flex flex-wrap items-center gap-3">
-                      <span className="font-mono text-sm text-teal">{exp.role}</span>
-                      <span className="font-mono text-xs text-muted-foreground border border-border px-2 py-0.5 rounded">
-                        {exp.period}
-                      </span>
-                    </div>
-
-                    <p className="text-sm text-muted-foreground leading-relaxed">{exp.description}</p>
-
-                    {exp.tech && (
-                      <div className="mt-3 flex flex-wrap gap-1.5">
-                        {exp.tech.map((t) => (
-                          <Badge key={t} variant="outline">{t}</Badge>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                </div>
-              </AnimatedSection>
-            ))}
+        {/* 자격증 */}
+        <div className="w98-divider" />
+        <div>
+          <div className="w98-section-heading">자격증</div>
+          <div className="text-sm">
+            <span className="font-bold">{certificate.name}</span>
+            <span className="text-w98-dark text-xs ml-2">· {certificate.issuer} · {certificate.date}</span>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
