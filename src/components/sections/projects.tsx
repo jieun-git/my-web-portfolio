@@ -61,17 +61,21 @@ export function ProjectDetailContent({ project }: ProjectDetailProps) {
           </div>
         </div>
 
-        {/* 이미지 */}
+        {/* 이미지 목록 */}
         {project.images && project.images.length > 0 && (
-          <div className="w98-inset overflow-hidden">
-            <Image
-              src={project.images[0]}
-              alt={project.name}
-              width={440}
-              height={220}
-              className="w-full object-cover"
-              unoptimized
-            />
+          <div className="space-y-2">
+            {project.images.map((src, i) => (
+              <div key={i} className="w98-inset overflow-hidden">
+                <Image
+                  src={src}
+                  alt={`${project.name} ${i + 1}`}
+                  width={620}
+                  height={340}
+                  className="w-full object-contain"
+                  unoptimized
+                />
+              </div>
+            ))}
           </div>
         )}
 

@@ -91,7 +91,7 @@ export default function Desktop() {
           id,
           isOpen: true,
           isMinimized: false,
-          position: { x: 340 + (prev.length % 5) * 24, y: 60 + (prev.length % 5) * 24 },
+          position: { x: 160 + (prev.length % 4) * 20, y: 40 + (prev.length % 4) * 20 },
           zIndex: zCounter,
         },
       ]);
@@ -137,7 +137,7 @@ export default function Desktop() {
       return {
         title: `${project?.name ?? ''} - Projects`,
         icon: '📄',
-        size: { width: 500, height: 460 },
+        size: { width: 660, height: 580 },
         statusLeft: '준비됨',
         statusRight: project?.id,
       };
